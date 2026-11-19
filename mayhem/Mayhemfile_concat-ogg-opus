@@ -1,0 +1,9 @@
+project: savantenvs/react-native-audio-api
+target: concat-ogg-opus
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/concat-ogg-opus/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_concat_ogg_opus
+    libfuzzer: true
+    timeout: 5

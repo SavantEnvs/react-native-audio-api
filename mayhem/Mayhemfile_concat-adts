@@ -1,0 +1,9 @@
+project: savantenvs/react-native-audio-api
+target: concat-adts
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/concat-adts/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_concat_adts
+    libfuzzer: true
+    timeout: 5

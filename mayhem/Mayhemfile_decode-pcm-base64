@@ -1,0 +1,9 @@
+project: savantenvs/react-native-audio-api
+target: decode-pcm-base64
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/decode-pcm-base64/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_decode_pcm_base64
+    libfuzzer: true
+    timeout: 5
